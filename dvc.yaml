@@ -1,0 +1,23 @@
+stages:
+  collect:
+    cmd: python collect_data.py
+    deps:
+      - collect_data.py
+    outs:
+      - weather_data.csv
+
+  preprocess:
+    cmd: python preprocess_data.py
+    deps:
+      - preprocess_data.py
+      - weather_data.csv
+    outs:
+      - processed_data.csv
+
+  train:
+    cmd: python train_model.py
+    deps:
+      - train_model.py
+      - processed_data.csv
+    outs:
+      - model.pkl
