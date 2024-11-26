@@ -20,7 +20,7 @@ def fetch_weather_data(location, date):
 def save_to_csv(data, filename):
     with open(filename, mode='w', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow(['Date', 'Time', 'Temperature', 'Humidity', 'Wind Speed', 'Weather Condition'])
+        writer.writerow(['Date', 'Temperature', 'Humidity', 'Wind Speed', 'Weather Condition'])
         for entry in data:
             writer.writerow(entry)
 
