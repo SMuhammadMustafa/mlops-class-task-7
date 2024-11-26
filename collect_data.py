@@ -42,4 +42,4 @@ def collect_weather_data(location, days):
     save_to_csv(weather_data, './data/weather_data.csv')
 
 # Collect weather data for the past 5 days for a specific location
-collect_weather_data('New York', 5)
+collect_weather_data('Islamabad', 5)
