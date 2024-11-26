@@ -45,7 +45,7 @@ def preprocess_data():
 
 # Define the DAG
 default_args = {
-    'owner': 'airflow',
+    'owner': 'mustafa',
     'depends_on_past': False,
     'start_date': datetime(2023, 1, 1),
     'retries': 1,
